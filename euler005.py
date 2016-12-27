@@ -6,6 +6,7 @@ What is the smallest positive number that is evenly divisible by all of the
 numbers from 1 to 20?
 """
 
+
 import math
 from collections import Counter
 from euler003 import get_prime_factors
@@ -47,5 +48,10 @@ def smallest_number_divisible_by_range(min=1, max=10, range_list=None):
     # Reduce the list by multiplying each item in the list with the next
     return reduce(lambda x, y: x * y, factors)
 
+
+def solution():
+    return smallest_number_divisible_by_range(1, 20)
+
+
 if __name__ == "__main__":
-    print(smallest_number_divisible_by_range(1, 20))
+    print(solution())
