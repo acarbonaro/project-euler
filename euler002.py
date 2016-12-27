@@ -44,4 +44,5 @@ def fib(terms = 10, start = 1, previous = 0):
     return sequence
 
 
-print(sum([x for x in fibByMax(MAX) if x % 2 == 0]))
+if __name__ == "__main__":
+    print(sum([x for x in fibByMax(MAX) if x % 2 == 0]))

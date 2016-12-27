@@ -26,4 +26,5 @@ def largest_palindrome(target):
     return 0
 
 
-print(largest_palindrome(MAGIC_NUMBER))
+if __name__ == "__main__":
+    print(largest_palindrome(MAGIC_NUMBER))

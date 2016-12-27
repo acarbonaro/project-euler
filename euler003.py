@@ -42,4 +42,5 @@ def sieve(num):
                 integers[j] = False
 
 
-print(sorted(get_prime_factors(13195)))
+if __name__ == "__main__":
+    print(sorted(get_prime_factors(13195))[-1])

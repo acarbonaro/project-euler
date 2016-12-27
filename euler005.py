@@ -8,39 +8,8 @@ numbers from 1 to 20?
 
 import math
 from collections import Counter
+from euler003 import get_prime_factors
 from functools import reduce
-
-
-def get_prime_factors(num, factors=[], orig_num=0, sieve_results=None):
-    """
-    Get all prime factors of `num`
-    """
-    if orig_num == 0:
-        orig_num = num
-    if not sieve_results:
-        sieve_results = [x for x in sieve(num)]
-    for prime in [x for x in sieve_results if num % x == 0]:
-        if num % prime == 0:
-            factors.append(prime)
-            get_prime_factors(int(num / prime), factors, orig_num, sieve_results)
-        if num < 2 or (factors and reduce(lambda x, y: x * y, factors) == orig_num):
-            return factors
-    return factors
-
-
-def sieve(num):
-    """
-    Run through the Sieve of Eratosthenes for `num` returing a list
-    """
-    integers = [True] * num
-    integers[0] = integers[1] = False
-
-    for (i, is_prime) in enumerate(integers):
-        if is_prime:
-            yield i
-            for j in range(i * i, num, i):
-                integers[j] = False
-
 
 
 def smallest_number_divisible_by_range(min=1, max=10, range_list=None):
@@ -78,4 +47,5 @@ def smallest_number_divisible_by_range(min=1, max=10, range_list=None):
     # Reduce the list by multiplying each item in the list with the next
     return reduce(lambda x, y: x * y, factors)
 
-print(smallest_number_divisible_by_range(1, 20))
+if __name__ == "__main__":
+    print(smallest_number_divisible_by_range(1, 20))
