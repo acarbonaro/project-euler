@@ -33,6 +33,9 @@ def sieve(num):
     """
     Run through the Sieve of Eratosthenes for `num` returing a list
     """
+    if num < 2:
+        return [False] * num
+
     integers = [True] * num
     integers[0] = integers[1] = False
 
