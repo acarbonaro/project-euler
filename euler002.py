@@ -44,6 +44,10 @@ def fib(terms = 10, start = 1, previous = 0):
     return sequence
 
 
+def test():
+    return sum([x for x in fibByMax() if x % 2 == 0])
+
+
 def solution():
     return sum([x for x in fibByMax(MAX) if x % 2 == 0])
 

@@ -10,6 +10,10 @@ def fizz_buzz(min=1, max=10):
     return [x for x in range(min, max) if x % 3 == 0 or x % 5 == 0]
 
 
+def test():
+    return sum(fizz_buzz())
+
+
 def solution():
     return sum(fizz_buzz(max=1000))
 

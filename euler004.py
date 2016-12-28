@@ -26,6 +26,10 @@ def largest_palindrome(target):
     return 0
 
 
+def test():
+    return largest_palindrome(99)
+
+
 def solution():
     return largest_palindrome(MAGIC_NUMBER)
 

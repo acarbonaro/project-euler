@@ -49,6 +49,10 @@ def smallest_number_divisible_by_range(min=1, max=10, range_list=None):
     return reduce(lambda x, y: x * y, factors)
 
 
+def test():
+    return smallest_number_divisible_by_range(1, 10)
+
+
 def solution():
     return smallest_number_divisible_by_range(1, 20)
 

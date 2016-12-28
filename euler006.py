@@ -20,6 +20,10 @@ def difference_between_sum_of_squares_and_square_of_sum(min=1, max=10):
     return int(math.pow(sum(range(min, max + 1)), 2) - sum([math.pow(x, 2) for x in range(min, max + 1)]))
 
 
+def test():
+    return difference_between_sum_of_squares_and_square_of_sum(max=10)
+
+
 def solution():
     return difference_between_sum_of_squares_and_square_of_sum(max=100)
 

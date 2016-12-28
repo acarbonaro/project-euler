@@ -46,6 +46,10 @@ def sieve(num):
                 integers[j] = False
 
 
+def test():
+    return sorted(get_prime_factors(13195))[-1]
+
+
 def solution():
     return sorted(get_prime_factors(13195))[-1]
 
