@@ -1,4 +1,5 @@
-import euler001, euler002, euler003, euler004, euler005, euler006
+import euler001, euler002, euler003, euler004, euler005, euler006, euler007,\
+    euler008
 import unittest
 
 
@@ -25,6 +26,14 @@ class TestSolutions(unittest.TestCase):
     def test_euler006(self):
         self.assertEqual(2640, euler006.test())
         self.assertEqual(25164150, euler006.solution())
+
+    def test_euler007(self):
+        self.assertEqual(13, euler007.test())
+        self.assertEqual(104743, euler007.solution())
+
+    def test_euler008(self):
+        self.assertEqual(5832, euler008.test())
+        self.assertEqual(23514624000, euler008.solution())
 
 
 if __name__ == '__main__':
