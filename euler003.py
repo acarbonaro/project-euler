@@ -12,10 +12,12 @@ from functools import reduce
 MAGIC_NUMBER = 600851475143
 
 
-def get_prime_factors(num, factors=[], orig_num=0, sieve_results=None):
+def get_prime_factors(num=None, factors=[], orig_num=0, sieve_results=None):
     """
     Get all prime factors of `num`
     """
+    if not num:
+        return []
     if orig_num == 0:
         orig_num = num
     if not sieve_results:
@@ -23,7 +25,7 @@ def get_prime_factors(num, factors=[], orig_num=0, sieve_results=None):
     for prime in [x for x in sieve_results if num % x == 0]:
         if num % prime == 0:
             factors.append(prime)
-            get_prime_factors(int(num / prime), factors, orig_num, sieve_results)
+            get_prime_factors(num=int(num / prime), factors=factors, orig_num=orig_num, sieve_results=sieve_results)
         if num < 2 or (factors and reduce(lambda x, y: x * y, factors) == orig_num):
             return factors
     return factors
@@ -47,11 +49,11 @@ def sieve(num):
 
 
 def test():
-    return sorted(get_prime_factors(13195))[-1]
+    return sorted(get_prime_factors(num=13195))[-1]
 
 
 def solution():
-    return sorted(get_prime_factors(13195))[-1]
+    return sorted(get_prime_factors(num=13195))[-1]
 
 
 if __name__ == "__main__":

@@ -21,7 +21,7 @@ def smallest_number_divisible_by_range(min=1, max=10, range_list=None):
     factors_dict = dict.fromkeys(range(1, max + 1), [])
     for i in range_to_test:
         if i > 1:
-            i_factors = get_prime_factors(i, [], 0)
+            i_factors = get_prime_factors(num=i, factors=[], orig_num=0)
             # If the number has factors, ensure that the greatest number of a
             # given factor is considered when creating the result
             if i_factors:
