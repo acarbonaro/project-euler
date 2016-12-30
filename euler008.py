@@ -39,10 +39,14 @@ def greatest_adjacent_product(target_number, adjacent):
     product = 0
     y = 0
     for x in range(len(target_string)):
-        new_product = reduce(lambda x, y: int(x) * int(y), list(target_string[x:(x + adjacent)]))
+        new_product = list_product(list(target_string[x:(x + adjacent)]))
         if int(new_product) > int(product):
             product = new_product
     return product
+
+
+def list_product(target_list):
+    return reduce(lambda x, y: int(x) * int(y), target_list)
 
 
 def test():

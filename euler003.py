@@ -53,8 +53,8 @@ def test():
 
 
 def solution():
-    return sorted(get_prime_factors(num=13195))[-1]
+    return sorted(get_prime_factors(num=MAGIC_NUMBER))[-1]
 
 
 if __name__ == "__main__":
-    print(solution())
+    print(sieve(MAGIC_NUMBER))
